@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+:root {
+  --c-bg: #1c1c1c;
+  --c-text: #f1f1f1;
+  --font-sans: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--c-bg);
+  color: var(--c-text);
+  font-family: var(--font-sans);
+}
+
+.prose {
+  max-width: 65ch;
+  margin: 0 auto;
+}
+
+.nav-item {
+  color: var(--c-text);
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item:hover {
+  opacity: 1;
+}
+
+.noise {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200%;
+  background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+  background-repeat: repeat;
+  animation: noise 0.2s infinite;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.gradient-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.05), transparent 25%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes noise {
+  0% { transform: translate(0,0) }
+  10% { transform: translate(-5%,-5%) }
+  20% { transform: translate(-10%,5%) }
+  30% { transform: translate(5%,-10%) }
+  40% { transform: translate(-5%,15%) }
+  50% { transform: translate(-10%,5%) }
+  60% { transform: translate(15%,0) }
+  70% { transform: translate(0,10%) }
+  80% { transform: translate(-15%,0) }
+  90% { transform: translate(10%,5%) }
+  100% { transform: translate(5%,0) }
+}
+
+iconify-icon {
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover iconify-icon {
+  transform: scale(1.1);
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2em;
+  padding: 0.1rem 0.6rem;
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: var(--c-text);
+}
+
+.project-link:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.project-link iconify-icon {
+  font-size: 0.8em;
+}
+
+.project-card {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.project-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.project-card h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  opacity: 0.7;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.tech-stack {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  opacity: 0.5;
+}

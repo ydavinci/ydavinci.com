@@ -1,0 +1,60 @@
+---
+import '/src/styles/global.css'
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - David</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="gradient-bg"></div>
+  <main class="px-6 py-16 mx-auto max-w-3xl">
+    <nav class="flex items-center justify-between mb-16">
+      <a href="/" class="text-2xl font-medium">David</a>
+      <div class="flex gap-6">
+        <a href="/projects" class="nav-item">Soon</a>
+        <a href="/contact" class="nav-item">Contact</a>
+      </div>
+    </nav>
+
+    <div class="prose">
+      <h1 class="text-4xl font-bold mb-8 ">Contact</h1>
+      <p class="mb-8 opacity-80">Find me on these platforms:</p>
+      
+      <div class="grid grid-cols-1 gap-4">
+        <a href="https://github.com/ydavinci" target="_blank" class="project-card">
+          <div class="flex items-center gap-3">
+            <iconify-icon icon="ri:github-line" width="24" class="text-violet-600"></iconify-icon>
+            <span class="font-medium text-violet-600">GitHub</span>
+          </div>
+          <p class="mt-2 text-sm opacity-60">@ydavinci</p>
+        </a>
+
+        <a href="mailto:david@free3.org" class="project-card">
+          <div class="flex items-center gap-3">
+            <iconify-icon icon="ri:mail-line" width="24" class="text-orange-400"></iconify-icon>
+            <span class="font-medium text-orange-400">Email</span>
+          </div>
+          <p class="mt-2 text-sm opacity-60">david@free3.org</p>
+        </a>
+
+        <a href="https://discord.com/users/ydavinci" target="_blank" class="project-card">
+          <div class="flex items-center gap-3">
+            <iconify-icon icon="ri:discord-line" width="24" class="text-indigo-500"></iconify-icon>
+            <span class="font-medium text-indigo-500">Discord</span>
+          </div>
+          <p class="mt-2 text-sm opacity-60">@ydavinci</p>
+        </a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
