@@ -5,5 +5,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  site: 'https://ydavinci.github.io/ydavinci.com/'
+  site: 'https://ydavinci.github.io',
+  base: '/certain-centauri'
 });
